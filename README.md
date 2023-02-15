@@ -67,3 +67,10 @@ end
 KeyLogger -->|tcp| CriminalServer
 end
 ```
+## Tools/Intended platform
+### Operating System
+For this demonstration Trojan Horse, Linux operating systems will be targeted. This is because of the wide-spread use of linux on many different servers and for ease of development. Also, it is easy to instantiate a VM that has linux operating systems installed
+### Languages/tools used
+The primary programming language is c++ and the web server will be developed in javascript.
+## Challenges and Risks
+The biggest risk and challenge that this project faces is to be responsible with our application. We plan to mitigate this by not storing any data after the application has been shut down and to make the user well aware that the application is a Trojan Horse. This will be done by having the application say "TROJAN HORSE" at the top. Additionally, all information that is gathered by the trojan horse will be visible to the "victim" for their exposure.
