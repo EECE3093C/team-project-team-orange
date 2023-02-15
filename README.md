@@ -18,3 +18,11 @@ https://github.com/ajayrandhawa/Keylogger
 
 ## How is it different?
 The demonstration Trojan Horse is different because it will target a specific victim profile. The Trojan Horse will target students and will be shielded behind a weather widget.
+## Software Architecture
+The Trojan Horse application will feature two seperate components. Firstly, the key-logger. The intention of the key logger is to make the "victims" key strokes known by the "cyber criminal". In this application, the key strokes will be logged and sent to the server where the "cyber criminal" can look for patterns or specific strings. For example "sudo" would point to the fact that the "victim" may shortly be entering their password.
+
+```mermaid
+flowchart LR
+    Keyboard -->|Keyboard interupts| id1((Intended Application))
+    Keyboard -->|Keyboard interupts| KeyLogger
+```
