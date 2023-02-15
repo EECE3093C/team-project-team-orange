@@ -19,10 +19,51 @@ https://github.com/ajayrandhawa/Keylogger
 ## How is it different?
 The demonstration Trojan Horse is different because it will target a specific victim profile. The Trojan Horse will target students and will be shielded behind a weather widget.
 ## Software Architecture
+### Key Logger
 The Trojan Horse application will feature two seperate components. Firstly, the key-logger. The intention of the key logger is to make the "victims" key strokes known by the "cyber criminal". In this application, the key strokes will be logged and sent to the server where the "cyber criminal" can look for patterns or specific strings. For example "sudo" would point to the fact that the "victim" may shortly be entering their password.
+The Key Logger will be housed in a benign application that seems to be very inconspicuous, such as a weather application. This will give the "Victim" something to look at that they have downloaded. This simulates a trojan horse that might actually have malicious intent 
 
 ```mermaid
 flowchart LR
+subgraph " "
+    direction LR
+    subgraph intended[Victims general actions]
     Keyboard -->|Keyboard interupts| id1((Intended Application))
+    end
+    subgraph criminal[Trojan horse application/Key logger]
     Keyboard -->|Keyboard interupts| KeyLogger
+    KeyLogger -->|tcp| CriminalServer
+    end
+end
+```
+
+### Criminal Server
+The second component of the demonstration trojan horse is to interpret the information that is being sent by the "victim" without them knowing. This part of the application will recieve the data from the "victims" computer and will look for specific strings that are very common in linux machines. For example, the Trojan Horse will identify the "victims" password from a command that uses sudo. The application will store the data in a file to show the "Victim" later.
+Additionally, the Criminal server will have a web interface that the "victim" can use to see what the potential criminals could be gaining from their computer usage.
+```mermaid
+flowchart LR
+subgraph " "
+    direction LR
+    CriminalServer -->|Raw data stream| id(String Parser) & id2(Web Visualizer)
+    id(String Parser) -->|Passwords| id1(User Information File)
+end
+``` 
+## Application full diagram
+```mermaid
+flowchart LR
+subgraph Application
+    subgraph "Victims computer"
+        direction LR
+        subgraph intended[Victims general actions]
+        Keyboard -->|Keyboard interupts| intendedApp((Intended Application))
+        end
+        Keyboard -->|Keyboard interupts| KeyLogger
+    end
+    subgraph "Criminal Server"
+    direction LR
+    CriminalServer -->|Raw data stream| id(String Parser) & id2(Web Visualizer)
+    id(String Parser) -->|Passwords| id1(User Information File)
+end
+KeyLogger -->|tcp| CriminalServer
+end
 ```
