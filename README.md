@@ -1,5 +1,5 @@
 # Trojan Horse Weather Application
-The Trojan Horse Weather Application is a research application for malware attacksthat commonly plauge the internet today. The goal of the application is to raise awareness for phising schemes and to prevent potential victims from getting their information stolen
+The Trojan Horse Weather Application is a research application for malware attacks that commonly plauge the internet today. The goal of the application is to raise awareness for phising schemes and to prevent potential victims from getting their information stolen
 ## Vision
 ### The application
 The Trojan Horse application is a common weather application that will be used to demonstrate to the user what information can be taken from them unknowingly. There will be two components: a key logger and a client to recieve the message stream.
