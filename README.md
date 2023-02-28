@@ -7,6 +7,7 @@ Please don't commit code to this directory. All code should be committed to bran
 
 ### [Weather App Repo](https://github.com/EECE3093C/team_orange_WeatherApp)
 ### [Web Server Repo](https://github.com/EECE3093C/team-orange-WebServer)
+### [Keylogger Repo](https://github.com/EECE3093C/team_orange_keylogger)
 
 
 The Trojan Horse Weather Application is a research application for malware attacks that commonly plague the internet today. The goal of the application is to raise awareness for trojan horse attacks and to prevent potential victims from getting their information stolen.
