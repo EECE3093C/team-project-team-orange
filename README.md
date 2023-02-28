@@ -11,6 +11,15 @@ Please don't commit code to this directory. All code should be committed to bran
 
 The Trojan Horse Weather Application is a research application for malware attacks that commonly plague the internet today. The goal of the application is to raise awareness for trojan horse attacks and to prevent potential victims from getting their information stolen.
 
+## Project Roles:
+
+**Daniel Corcoran**: PM and Web Server
+
+**Will Schreiner**: Weather Application
+
+**Steven Kraine**: Keylogger
+
+
 
 ## Vision
 ### The application
